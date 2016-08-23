@@ -1,5 +1,5 @@
 name:     'rvm-phantomjs'
-version:  0.0.3
+version:  0.0.4
 inherits: wercker/rvm@8.0.0
 platform: ubuntu@12.04
 type:     main
@@ -21,4 +21,4 @@ script: |
   sleep 3
 
 env:
-  DISPLAY: ":99.0"
+  WERCKER_DISPLAY: ":99.0"
