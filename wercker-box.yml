@@ -1,18 +1,18 @@
 name: 'rvm-phantomjs'
-version:  0.0.1
+version:  0.0.2
 type: main
 inherits: wercker/rvm@8.0.0
 platform: ubuntu@12.04
 keywords:
-  - rvm
-  - phantomjs
+    - rvm
+    - phantomjs
 script: |
-  sudo apt-get update
-  cd /tmp
-  wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
-  tar xfj phantomjs-2.1.1-linux-x86_64.tar.bz2
-  sudo cp /tmp/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
-  sudo apt-get install libsasl2-2 libsasl2-dev
-  export DISPLAY=:99.0
-  start-stop-daemon --start --quiet --pidfile /tmp/xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
-  sleep 3
+    sudo apt-get update
+    cd /tmp
+    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+    tar xfj phantomjs-2.1.1-linux-x86_64.tar.bz2
+    sudo cp /tmp/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
+    sudo apt-get install libsasl2-2 libsasl2-dev
+    export DISPLAY=:99.0
+    start-stop-daemon --start --quiet --pidfile /tmp/xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+    sleep 3
