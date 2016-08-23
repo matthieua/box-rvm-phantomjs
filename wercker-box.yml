@@ -1,7 +1,7 @@
 name: 'rvm-phantomjs'
 version:  0.0.1
 type: main
-inherits: wercker/rvm
+inherits: wercker/rvm@8.0.0
 platform: ubuntu@12.04
 keywords:
   - rvm
