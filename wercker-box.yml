@@ -1,3 +1,4 @@
+box: wercker/default
 name: 'rvm-phantomjs'
 version:  0.0.1
 type: main
